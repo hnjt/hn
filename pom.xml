@@ -31,6 +31,7 @@
         <module>hn_pojo</module>
         <module>hn_common</module>
         <module>hn_core_server</module>
+        <module>hn_core_web</module>
     </modules>
 
     <dependencies>
@@ -52,6 +53,13 @@
         <dependency>
             <groupId>com.hn</groupId>
             <artifactId>hn_core_server</artifactId>
+            <version>2.1.0.RELEASE</version>
+        </dependency>
+
+        <!--core_web-->
+        <dependency>
+            <groupId>com.hn</groupId>
+            <artifactId>hn_core_web</artifactId>
             <version>2.1.0.RELEASE</version>
         </dependency>
     </dependencies>
