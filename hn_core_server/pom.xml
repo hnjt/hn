@@ -27,6 +27,24 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <!--server 依赖-->
+    <dependencies>
+
+        <!-- 数据库连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.26</version>
+        </dependency>
+
+        <!-- mysql odbc -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
     <build>
         <!--<resources>
             &lt;!&ndash;<resource>
