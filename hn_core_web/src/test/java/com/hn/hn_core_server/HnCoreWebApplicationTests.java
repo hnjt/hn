@@ -1,4 +1,4 @@
-package com.hn.hn_core_web;
+package com.hn.hn_core_server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

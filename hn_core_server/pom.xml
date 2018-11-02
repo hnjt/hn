@@ -28,14 +28,14 @@
     </properties>
 
     <build>
-        <resources>
-            <resource>
+        <!--<resources>
+            &lt;!&ndash;<resource>
                 <directory>src/main/resource</directory>
                 <filtering>false</filtering>
                 <includes>
                     <include>**/*</include>
                 </includes>
-            </resource>
+            </resource>&ndash;&gt;
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
@@ -55,7 +55,7 @@
                     <exclude>**/*</exclude>
                 </excludes>
             </resource>
-        </resources>
+        </resources>-->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

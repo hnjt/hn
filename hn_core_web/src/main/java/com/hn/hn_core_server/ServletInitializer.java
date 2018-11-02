@@ -1,4 +1,4 @@
-package com.hn.hn_core_web;
+package com.hn.hn_core_server;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
