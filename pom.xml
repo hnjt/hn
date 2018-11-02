@@ -10,12 +10,33 @@
     <artifactId>hn</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <!--制定 jdk 和 编码-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <!--模型管理-->
     <modules>
-        <module>hn_web</module>
-        <module>hn_dao</module>
+        <module>hn_pojo</module>
         <module>hn_common</module>
-        <module>hn_service</module>
     </modules>
 
+    <dependencies>
+        <!--pojo-->
+        <dependency>
+            <groupId>com.hn</groupId>
+            <artifactId>hn_pojo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
+        <!--common-->
+        <dependency>
+            <groupId>com.hn</groupId>
+            <artifactId>hn_pojo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
