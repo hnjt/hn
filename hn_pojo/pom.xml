@@ -5,10 +5,10 @@
     <!--基础信息-->
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.hn</groupId>
-    <artifactId>hn_common</artifactId>
+    <artifactId>hn_pojo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>hn_common</name>
+    <name>hn_pojo</name>
 
     <!--继承-->
     <parent>
@@ -33,5 +33,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
