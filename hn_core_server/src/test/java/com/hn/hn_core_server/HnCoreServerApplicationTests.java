@@ -26,9 +26,9 @@ public class HnCoreServerApplicationTests {
     @Test
     public void testDatasource() {
 
-        List<TestModel> testModels = this.testImpl.testGetList();
+        /*List<TestModel> testModels = this.testImpl.testGetList();
         for (TestModel testModel : testModels) {
             System.out.println(testModel);
-        }
+        }*/
     }
 }
