@@ -1,4 +1,4 @@
-package com.hn.hn_core_server;
+package com.hn.hn_core_web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
