@@ -29,6 +29,7 @@
 
     <!--模型管理-->
     <modules>
+        <module>hn_eureka</module>
         <module>hn_pojo</module>
         <module>hn_common</module>
         <module>hn_core_server</module>
