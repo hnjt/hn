@@ -1,0 +1,11 @@
+FrameworkExplain:
+黑农微服务架构：MyBatis + SpringCloud + Thymleaf + bootstrap +MySQL（每一个server + web 都可以独立运行，这里是核心结构）
+SpringClould 架构；
+1.hn 父工程，版本和依赖统一管理；
+2.hn_eureka Euraka 注册中心；
+3.hn_common 统一配置，工具类等配置模块需要打包到server和web做共享文件；
+4.hn_pojo 统一实体类管理，需要打包到server和web调用；
+5.hn_server 服务接口，向Euraka提供数据，等其他模块调用；
+6.hn_web 到Euraka调用自己需要的数据，然后渲染到页面；
+7.DB接入mysql；
+8.前端框架bootstrap + Thymleaf；
