@@ -36,4 +36,6 @@ public class TestController {
         ResponseEntity<String> forEntity = this.restTemplate.getForEntity("http://localhost:8087/test/testGetList", String.class);
         return forEntity.getBody();
     }
+
+
 }
