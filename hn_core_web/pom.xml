@@ -21,8 +21,10 @@
         <web.version>2.1.0.RELEASE</web.version>
         <!--<thymeleaf.version>2.1.0.RELEASE</thymeleaf.version>-->
         <eureka.version>2.1.0.M1</eureka.version>
+        <hadoop.version>3.1.0</hadoop.version>
         <bootstrap.version>3.3.5</bootstrap.version>
         <jquery.version>3.1.1</jquery.version>
+        <hadoop.version>2.7.6</hadoop.version>
     </properties>
 
     <!--web 依赖-->
@@ -50,6 +52,34 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-ribbon</artifactId>
         </dependency>-->
+
+        <!--hadoop -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.javacsv</groupId>
+            <artifactId>javacsv</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <!--hadoop end-->
 
         <!--bootstrap-->
         <dependency>
