@@ -18,12 +18,18 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <!--依赖版本管理-->
+    <properties>
+        <eureka.version>2.1.0.M1</eureka.version>
+    </properties>
+
     <!--Eureka server 依赖-->
     <dependencies>
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <version>${eureka.version}</version>
         </dependency>
 
         <!--Eureka lock-->
@@ -31,10 +37,5 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 </project>
