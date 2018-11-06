@@ -9,3 +9,5 @@ SpringClould 架构；
 6.hn_web 到Euraka调用自己需要的数据，然后渲染到页面；
 7.DB接入mysql；
 8.前端框架bootstrap + Thymleaf；
+9.资源服务器 hadoop + spark 架构，如项目需要资源服务器提供服务，需要\hn_common\src\main\java\com\hn\hn_common\hadoop-common-2.7.6\bin下，配置hadoop环境变量
+
