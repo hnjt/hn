@@ -15,60 +15,11 @@
         <groupId>com.hn</groupId>
         <artifactId>hn</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
-    <!--制定 jdk 和 编码-->
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-    </properties>
-
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resource</directory>
-                <filtering>false</filtering>
-                <includes>
-                    <include>**/*</include>
-                </includes>
-            </resource>
-            <!--<resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>-->
-            <resource>
-                <directory>src/test/java</directory>
-                <includes>
-                    <include>**/*</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resource</directory>
-                <filtering>true</filtering>
-                <excludes>
-                    <exclude>**/*</exclude>
-                </excludes>
-            </resource>
-        </resources>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.hn</mainClass>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -80,23 +31,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <!--<plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <url>http://localhost:8080/manager/text</url>
-                    <server>TomcatServer</server>
-                    <path>/customer</path>
-                    <ignorePackaging>true</ignorePackaging>
-                    <contextReloadable>true</contextReloadable>
-                    &lt;!&ndash; tomcat管理权限认证 需要与%TOMCAT7_PATH%/conf/tomcat-users.xml %MAVEN_PATH%/conf/settings.xml
-                        保持一致 &ndash;&gt;
-                    <id>tomcat</id>
-                    <username>admin</username>
-                    <password>admin</password>
-                </configuration>
-            </plugin>-->
             <!-- 发布到tomcat下跳过测试项 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -107,6 +41,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
