@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hn.hn_core_server.dao.UserLoginDAO" >
+
+    <select id="getUserLoginByUuid" resultType="com.hn.hn_pojo.Entity.UserVO">
+          SELECT uuid ,
+          userName ,
+          passWord ,
+          iphone ,
+          card ,
+          rName
+          FROM hn_user_login
+    </select>
+</mapper>

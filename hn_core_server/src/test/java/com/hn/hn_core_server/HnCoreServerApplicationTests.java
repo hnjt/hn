@@ -1,7 +1,5 @@
 package com.hn.hn_core_server;
 
-import com.hn.hn_common.utils.TestCom;
-import com.hn.hn_core_server.service.TestService;
 import com.hn.hn_pojo.DTO.UserVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,8 +17,6 @@ public class HnCoreServerApplicationTests {
         System.out.println("Test-Cheny");
     }
 
-    @Autowired
-    private TestService testImpl;
 
     @Test
     public void testPojo() {
@@ -30,15 +26,6 @@ public class HnCoreServerApplicationTests {
         userVO.setrName("孟晓栋");
         userVO.setPassWord("111111");
         System.out.println("Pojo:"+userVO);
-
-    }
-
-    @Test
-    public void testCom() {
-
-        TestCom tc = new TestCom();
-        String str = tc.testGet("Chenyb");
-        System.out.println(str);
 
     }
 }
