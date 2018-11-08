@@ -11,15 +11,14 @@ public class ObjectToPojo {
 
     /**
      * Object数组转换实体对象
-     * @param obj
+     * @param obs
      * @param clz
      * @return
      * @throws Exception
      */
-    public static <T> T objToPojo (Object obj,Class<T> clz) throws Exception{
+    public static <T> T objToPojo (Object[] obs,Class<T> clz) throws Exception{
 
         Field[] fs = clz.getClass().getDeclaredFields();
-        Object[] obs = (Object[]) obj;
         int i = 0 ;
         for (Field f : fs) {
 
@@ -36,12 +35,11 @@ public class ObjectToPojo {
      * @return
      * @throws Exception
      */
-    public static <T> List<T> objToPojo (List<Object> objList,Class<T> clz) throws Exception{
+    public static <T> List<T> objToPojo (List<Object[]> objList,Class<T> clz) throws Exception{
 
         List<T> list = new ArrayList<>();
-        for (Object obs : objList) {
-
-            list.add(ObjectToPojo.objToPojo(obs,clz));
+        for (Object[] objects : objList) {
+            list.add(ObjectToPojo.objToPojo(objects,clz));
         }
         return list;
     }
