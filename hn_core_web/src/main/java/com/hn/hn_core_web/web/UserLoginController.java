@@ -1,6 +1,7 @@
 package com.hn.hn_core_web.web;
 
 import com.hn.hn_core_web.service.UserLoginService;
+import com.hn.hn_pojo.Entity.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -43,7 +44,7 @@ public class UserLoginController {
     private UserLoginService userLoginImpl;
 
     @GetMapping("/test3")
-    public List ccc (){
+    public List<UserVO> ccc (){
 
         return this.userLoginImpl.getUserLoginByUuid();
     }
