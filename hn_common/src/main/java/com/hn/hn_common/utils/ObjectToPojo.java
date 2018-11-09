@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Object 转换 实体类 of Date 2018-11-08 by Chenyb
+ * Object 转换 实体类 of Date 2018-11-08 by Chenyb (Testing)
  */
 public class ObjectToPojo {
 
@@ -24,6 +24,7 @@ public class ObjectToPojo {
 
             f.setAccessible(true);
             f.set(clz,obs[i++]);
+            System.out.println(i +"-----------------------------------------"+ obs[i]);
         }
         return (T) clz;
     }

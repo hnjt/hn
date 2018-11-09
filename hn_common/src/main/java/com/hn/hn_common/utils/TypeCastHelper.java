@@ -1,5 +1,8 @@
 package com.hn.hn_common.utils;
 
+/**
+ * 类型转换 of Date 2018-11-09 By Chenyb
+ */
 public class TypeCastHelper {
     private static final String DEFAULT_STRING = "";
     private static final int DEFAULT_INT = 0;
