@@ -8,4 +8,6 @@ import java.util.List;
 public interface UserLoginService {
 
     List getUserLoginByUuid (String uuid);
+
+    List getUserLoginByUuid2 (String uuid);
 }

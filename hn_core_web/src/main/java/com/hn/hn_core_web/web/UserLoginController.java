@@ -50,4 +50,11 @@ public class UserLoginController {
         System.out.println(uuid);
         return this.userLoginImpl.getUserLoginByUuid(uuid);
     }
+
+    @GetMapping("/test4")
+    public List<UserVO> sss (String uuid){
+
+        System.out.println(uuid);
+        return this.userLoginImpl.getUserLoginByUuid(uuid);
+    }
 }

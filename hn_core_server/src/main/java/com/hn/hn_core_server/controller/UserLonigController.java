@@ -45,4 +45,14 @@ public class UserLonigController {
         System.out.println("----------------------------"+uuid+"---------------------------------");
         return this.userLoginDAO.getUserLoginByUuid();
     }
+
+    /**
+     * Eureka Test
+     */
+    @PostMapping("/getUserLoginByUuid2")
+    public List<UserVO> getUserLoginByUuid2 (String uuid){
+
+        System.out.println("----------------------------"+uuid+"---------------------------------");
+        return this.userLoginDAO.getUserLoginByUuid();
+    }
 }
