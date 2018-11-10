@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -44,8 +45,9 @@ public class UserLoginController {
     private UserLoginService userLoginImpl;
 
     @GetMapping("/test3")
-    public List<UserVO> ccc (){
+    public List<UserVO> ccc (String uuid){
 
-        return this.userLoginImpl.getUserLoginByUuid();
+        System.out.println(uuid);
+        return this.userLoginImpl.getUserLoginByUuid(uuid);
     }
 }

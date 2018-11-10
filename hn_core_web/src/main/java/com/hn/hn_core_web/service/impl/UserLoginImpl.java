@@ -18,8 +18,8 @@ public class UserLoginImpl implements UserLoginService {
     private String hn_core_server;
 
     @Override
-    public List<UserVO> getUserLoginByUuid() {
+    public List<UserVO> getUserLoginByUuid(String uuid) {
 
-        return restTemplate.getForEntity(this.hn_core_server + "/test/getUserLoginByUuid", List.class).getBody();
+        return restTemplate.getForEntity(this.hn_core_server + "/test/getUserLoginByUuid?uuid="+uuid, List.class).getBody();
     }
 }

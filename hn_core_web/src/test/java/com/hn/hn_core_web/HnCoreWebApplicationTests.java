@@ -35,19 +35,18 @@ public class HnCoreWebApplicationTests {
         System.out.println("------------------Test Ok！---------------------");
         try {
             //读取本地文件系统,并创建输入流
-            FileSystem fs = FileSystem.get(new URI("hdfs://114.115.173.182:9000"),new Configuration(),"root");
+            FileSystem fs = FileSystem.get(new URI("hdfs://114.115.173.182:9000"),new Configuration(),"master");
             System.out.println("------------------连接成功！---------------------");
-            InputStream in = new FileInputStream("G://KuGou/陈雷 - 欢喜就好.ape");
+            InputStream in = new FileInputStream("C:\\Users\\Administrator\\Desktop\\工作周报【1015--1019】【陈永斌】.xlsx");
             System.out.println("-------------------文件获取成功！------------------------");
             //在HDFS上创建一个文件返回输出流
-            OutputStream out = fs.create(new Path("/user/master/input/陈雷 - 欢喜就好.ape"));
+            OutputStream out = fs.create(new Path("/input/hn"));
             System.out.println("---------------------返回成功----------------------");
             //将输入流写到输出流,buffersize是4k,即每读4k数据返回一次,写完返回true
             IOUtils.copyBytes(in,out,4096,true);
             System.out.println("---------------------上传Hadoop文件成功!----------------");
             java.sql.Date date = new java.sql.Date(new Date().getTime());
             System.out.println(date.toString());
-
         }catch (Exception e){
             e.printStackTrace();
         }

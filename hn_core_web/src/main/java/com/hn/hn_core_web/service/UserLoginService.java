@@ -7,5 +7,5 @@ import java.util.List;
  */
 public interface UserLoginService {
 
-    List getUserLoginByUuid ();
+    List getUserLoginByUuid (String uuid);
 }
