@@ -40,7 +40,7 @@ public class UserLonigController {
      * Eureka Test
      */
     @GetMapping("/getUserLoginByUuid")
-    public List<UserVO> getUserLoginByUuid (String uuid){
+    public List<UserVO> getUserLoginByUuid (@RequestBody String uuid){
 
         System.out.println("----------------------------"+uuid+"---------------------------------");
         return this.userLoginDAO.getUserLoginByUuid();
@@ -50,7 +50,7 @@ public class UserLonigController {
      * Eureka Test
      */
     @PostMapping("/getUserLoginByUuid2")
-    public List<UserVO> getUserLoginByUuid2 (String uuid){
+    public List<UserVO> getUserLoginByUuid2 (@RequestBody String uuid){
 
         System.out.println("----------------------------"+uuid+"---------------------------------");
         return this.userLoginDAO.getUserLoginByUuid();
