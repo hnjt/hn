@@ -13,7 +13,7 @@ import java.util.List;
 @FeignClient(name = "CORE-SERVER")
 public interface TestFeginService {
 
-    @RequestMapping(value = "/test/getUserLoginByUuid2",method = RequestMethod.POST)
+    @RequestMapping(value = "/test/getUserLoginByUuid2",method = RequestMethod.POST ,consumes = "application/json")
     List<com.hn.hn_pojo.Entity.UserVO> getUserLoginByUuid2(@RequestBody String uuid);
 
     @RequestMapping(value = "/test/getUserLoginByUuid",method = RequestMethod.GET, consumes = "application/json" )

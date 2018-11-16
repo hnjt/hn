@@ -4,6 +4,7 @@ import com.hn.hn_core_server.dao.UserLoginDAO;
 import com.hn.hn_pojo.Entity.UserVO;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,10 +50,21 @@ public class UserLonigController {
     /**
      * Eureka Test
      */
-    @PostMapping("/getUserLoginByUuid2")
+    @PostMapping(value = "/getUserLoginByUuid2")
     public List<UserVO> getUserLoginByUuid2 (@RequestBody String uuid){
 
         System.out.println("----------------------------"+uuid+"---------------------------------");
         return this.userLoginDAO.getUserLoginByUuid();
+    }
+
+    /**
+     * 根据用户名查询用户
+     * @param userName
+     * @return
+     */
+    @PostMapping(value = "/getUserByUserName")
+    public UserVO getUserByUserName(String userName){
+
+        return this.userLoginDAO.getUserByUserName(userName);
     }
 }

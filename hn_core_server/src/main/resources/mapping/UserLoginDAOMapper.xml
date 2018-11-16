@@ -2,13 +2,29 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.hn.hn_core_server.dao.UserLoginDAO" >
 
+    <sql id="UserVO">
+      uuid ,
+      userName ,
+      passWord ,
+      iphone ,
+      card ,
+      rName
+    </sql>
     <select id="getUserLoginByUuid" resultType="com.hn.hn_pojo.Entity.UserVO">
-          SELECT uuid ,
-          userName ,
-          passWord ,
-          iphone ,
-          card ,
-          rName
+          SELECT
+              <include refid="UserVO"></include>
           FROM hn_user_login
+    </select>
+
+    <!--查询用户-->
+    <select id="getUserByUserName" resultType="com.hn.hn_pojo.Entity.UserVO">
+        SELECT
+            <include refid="UserVO"></include>
+        FROM hn_user_login
+        <where>
+            <if test="userName != null">
+                userName = #{userName}
+            </if>
+        </where>
     </select>
 </mapper>
