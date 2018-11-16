@@ -1,14 +1,26 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>action is everything</title>
+    <title>黑农首页</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webapp/static/common.html}">
+    <!--<link rel="import" href="/webapp/static/common.html">-->
 </head>
-<body>
-<div  data-th-fragment="header">
-    <h1> Thyleaf in action </h1>
-    hello  ceshi
-</div>
+<body style="background-color: green">
+    <form>
+        <div>
+            <label>用户：</label><input/>
+        </div>
+        <div>
+            <label>密码：</label><input/>
+        </div>
+        <div>
+            <button class="btn">提交</button>
+        </div>
+    </form>
 </body>
+<script type="text/javascript">
+    alert(1)
+</script>
+<script th:src="@{/webapp/js/index.js}"></script>
 </html>
