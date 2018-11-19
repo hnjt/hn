@@ -64,4 +64,11 @@ public class UserLoginController {
         return this.userLoginImpl.getUserLoginByUuid2(uuid);
     }
 
+    @GetMapping(value = "getStrig")
+    @ResponseBody
+    public String getStringTest (){
+
+        return this.userLoginImpl.getStringTest();
+    }
+
 }

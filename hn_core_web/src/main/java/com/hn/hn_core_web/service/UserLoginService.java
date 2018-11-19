@@ -10,4 +10,6 @@ public interface UserLoginService {
     List getUserLoginByUuid (String uuid);
 
     List getUserLoginByUuid2 (String uuid);
+
+    String getStringTest();
 }
