@@ -16,7 +16,7 @@ public class UserLoginController {
 
     @RequestMapping("test")
     public String test(){
-        return "/html/index";
+        return "/index";
     }
 
     @Autowired

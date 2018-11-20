@@ -59,6 +59,12 @@
             <!--<version>${thymeleaf.version}</version>-->
         </dependency>
 
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>1.9.22</version>
+        </dependency>
+
         <!--eureka-client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
