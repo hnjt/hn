@@ -33,6 +33,7 @@ public class UserLoginController {
     }*/
 
     @GetMapping("/test2")
+    @ResponseBody
     public List sss (Class responseType){
 
         ResponseEntity<List> forEntity = this.restTemplate.getForEntity(hn_core_server + "/test/getUserLoginByUuid", List.class);

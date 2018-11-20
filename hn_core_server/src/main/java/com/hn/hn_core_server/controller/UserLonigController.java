@@ -4,12 +4,10 @@ import com.hn.hn_core_server.dao.UserLoginDAO;
 import com.hn.hn_pojo.Entity.UserVO;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/test")
