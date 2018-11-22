@@ -14,10 +14,10 @@ import java.util.List;
 @Controller
 public class UserLoginController {
 
-    @RequestMapping("test")
+    /*@RequestMapping("test")
     public String test(){
         return "/html/login";
-    }
+    }*/
 
     @Autowired
     private RestTemplate restTemplate;
